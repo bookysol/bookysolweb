@@ -1,0 +1,63 @@
+body {
+    background-color: LightSteelBlue;
+}
+
+header, footer {
+    background-color: #1800ad;
+}
+
+.header-footer {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul {
+    color: darkblue;
+}
+
+a{
+    color: darkblue;
+    font-style: italic;
+}
+
+h1 {
+    color: DarkBlue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-style: italic;
+}
+
+h2 {
+    color: DarkBlue;
+    font-size: x-large;
+    font-style: italic;
+}
+
+h3 {
+    color: DarkBlue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h4 {
+    color: DarkBlue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h5 {
+    color: DarkBlue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h6 {
+    color: DarkBlue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    color: DarkBlue;
+    font-family: 'Times New Roman', Times, serif;
+}
