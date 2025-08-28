@@ -2,8 +2,18 @@ body {
     background-color: rgb(215, 232, 255);
 }
 
-header, footer {
+header {
     background-color: #1800ad;
+    padding-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-footer {
@@ -19,6 +29,7 @@ header, footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .enlaces-pages {
@@ -56,6 +67,7 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;
     font-style: italic;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,4 +108,13 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+footer {
+    background-color: #1800ad;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
