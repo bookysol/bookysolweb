@@ -1,5 +1,5 @@
 body {
-    background-color: LightSteelBlue;
+    background-color: rgb(215, 232, 255);
 }
 
 header, footer {
@@ -15,6 +15,33 @@ header, footer {
     align-items: center;
 }
 
+.subtitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enlaces-pages {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.page {
+    width: 45%;
+    height: auto;
+    border: 2px double darkblue;
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
 ul {
     color: darkblue;
 }
@@ -29,6 +56,9 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;
     font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h2 {
@@ -60,4 +90,10 @@ h6 {
 p {
     color: DarkBlue;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.fondo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
