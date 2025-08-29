@@ -25,34 +25,6 @@ header {
     align-items: center;
 }
 
-.subtitulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.enlaces-pages {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.page {
-    width: 45%;
-    height: auto;
-    border: 2px double darkblue;
-    border-radius: 5px;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-
 ul {
     color: darkblue;
 }
@@ -108,6 +80,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 3rem;
 }
 
 footer {
@@ -117,4 +90,54 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+
+
+.subtitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.enlaces-pages {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.page {
+    width: 45%;
+    height: auto;
+    border: 2px double darkblue;
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.sobremi {
+    width: 70%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    padding: 20px;
+    margin: 0 auto;
+    margin-left: 20%;
+    margin-right: 15%;
+}
+
+.sobremi-img {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
