@@ -268,7 +268,7 @@ footer {
 
 
 /*Contacto*/
-form {
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -277,10 +277,10 @@ form {
     margin-top: 2%;
 }
 
-form label, select, option, input, textarea {
+.form label, select, option, input, textarea {
     color: #1800ad;
 }
 
-form textarea {
+.form input, textarea {
     border: 1px double #1800ad;
 }
