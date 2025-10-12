@@ -1,0 +1,221 @@
+// main.scss
+
+// ----------------------
+// Variables
+// ----------------------
+$bg: rgb(215, 232, 255);
+$primary: #1800ad;
+$darkblue: darkblue;
+$text: #090042;
+$card-bg: #fff;
+$shadow: rgba(0,0,0,0.1);
+$shadow-strong: rgba(0,0,0,0.15);
+
+$font-sans: 'Arial', sans-serif;
+$font-serif: 'Times New Roman', Times, serif;
+
+$bp-md: 1024px;
+$bp-sm: 768px;
+$bp-xs: 48rem; // 768px
+
+// ----------------------
+// Mixins
+// ----------------------
+@mixin center-flex($dir: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive-container {
+  width: min(1100px, 95%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ----------------------
+// Global
+// ----------------------
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background-color: $bg;
+  font-family: $font-serif;
+  color: $darkblue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+  overflow-x: hidden; // evita overflow
+  margin: 0;
+  padding: 0;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $darkblue;
+  font-family: $font-serif;
+  margin: 0.5rem 0;
+  line-height: 1.1;
+}
+h1 {
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+// Links
+a {
+  color: $darkblue;
+  font-style: italic;
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+}
+
+// ----------------------
+// Header / Footer
+// ----------------------
+header, footer {
+  background-color: $primary;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  @include center-flex(row, center, center);
+}
+
+.logo { @include center-flex(); }
+
+.header-footer {
+  @include center-flex(row, space-evenly, center);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+  a { color: #fff; font-weight: 500; }
+}
+
+// ----------------------
+// Layout helpers
+// ----------------------
+.container { @include responsive-container; }
+
+// ----------------------
+// Inicio (enlaces-pages / page)
+// ----------------------
+.enlaces-pages {
+  @include center-flex(row, center, stretch);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.page {
+  flex: 1 1 45%;
+  min-width: 260px;
+  border: 2px double $darkblue;
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-align: center;
+  background: rgba(255,255,255,0.6);
+  margin: 0.5rem;
+}
+
+// ----------------------
+// Sobre mí
+// ----------------------
+.sobremi {
+  @include center-flex(row, center, stretch);
+  gap: 2rem;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.sobremi-img { flex: 0 0 35%; max-width: 320px; }
+
+// ----------------------
+// Reseñas (cards grid)
+// ----------------------
+.reseñas {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.reseña-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: $card-bg;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.9375rem $shadow;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover { transform: translateY(-5px); box-shadow: 0 6px 20px $shadow-strong; }
+}
+.reseña-card .card-img-top {
+  width: 50%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+.reseña-card .puntuacion {
+  font-weight: 600;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: $text;
+  text-align: center;
+}
+.reseña-card .enlaces a:hover { color: #2200ff; }
+
+// ----------------------
+// Cenizas (detalle libro)
+// ----------------------
+.cenizas-contenido {
+  display: flex;
+  gap: 2rem;
+  margin: 2%;
+  align-items: center;
+}
+.cenizas-portada img { width: 250px; height: auto; }
+.cenizas-texto { flex: 1; }
+
+// ----------------------
+// Contacto (form)
+ // ----------------------
+.form {
+  @include center-flex(column, center, center);
+  gap: 1rem;
+  margin-top: 2%;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form label, .form select, .form option, .form input, .form textarea {
+  color: $primary;
+}
+.form input, .form textarea {
+  border: 1px double $primary;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 6px;
+}
+
+// ----------------------
+// Responsive
+// ----------------------
+@media (max-width: $bp-md) {
+  .enlaces-pages { flex-direction: column; gap: 1rem; }
+  .page { width: 90%; margin: 0.5rem auto; min-width: auto; }
+  .sobremi { flex-direction: column; width: 95%; margin: 1rem auto; }
+  .cenizas-contenido { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: $bp-xs) {
+  .reseñas { grid-template-columns: 1fr; }
+}
