@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-serif;
   margin: 0.5rem 0;
   line-height: 1.1;
+  text-align: center;
 }
 h1 {
   font-size: 2rem;
@@ -114,9 +115,10 @@ header, footer {
 .page {
   flex: 1 1 45%;
   min-width: 260px;
-  border: 2px dashed $darkblue;
+  border: 2px double $darkblue;
   border-radius: 5px;
   padding: 0.5rem;
+  background-color: none;
   text-align: center;
   margin: 0.5rem;
 }
