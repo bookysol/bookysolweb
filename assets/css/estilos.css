@@ -97,7 +97,7 @@ header, footer {
   border: 2px double darkblue;
   border-radius: 5px;
   padding: 0.5rem;
-  background-color: none;
+  background-color: rgb(215, 232, 255);
   text-align: center;
   margin: 0.5rem;
 }
