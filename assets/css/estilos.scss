@@ -114,11 +114,10 @@ header, footer {
 .page {
   flex: 1 1 45%;
   min-width: 260px;
-  border: 2px double $darkblue;
+  border: 2px dashed $darkblue;
   border-radius: 5px;
   padding: 0.5rem;
   text-align: center;
-  background: rgba(255,255,255,0.6);
   margin: 0.5rem;
 }
 
