@@ -1,4 +1,4 @@
-# BookySol 🌷📚
+# Bookysol Web 🌷📚
 
 Sitio web personal desarrollado como proyecto final del curso de **Desarrollo Web en Coderhouse**.
 
